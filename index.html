@@ -111,6 +111,8 @@ RESULTADO: {{resultado}}
     
     <button  type="sumbit"class="btn-block btn btn-success"> OBTENER RESULTADO </button>
       
+      <button @click="limpiar()"  type="button"class="btn-block btn btn-warning"> LIMPIAR DATOS</button>
+        
       
       </div>
        
@@ -141,13 +143,21 @@ RESULTADO: {{resultado}}
     ,
     methods: {
       
-       procesar: function (e) {
+      
+      limpiar: function () {
+    
+this.nombre = ''
+this.apellido = ''
+this.edad = 0 
+this.resultado = 0
+       
+      },
+       procesar: function () {
     
 this.resultado = (this.nombre.length + this.apellido.length)*this.edad ;
          
          
-         
-         
+       
       }
       
     }
