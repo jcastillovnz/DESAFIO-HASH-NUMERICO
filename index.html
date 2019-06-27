@@ -1,0 +1,159 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+<div id="app" class="container">
+<form  @submit.prevent="procesar()" >
+
+  
+    <div class="row align-items-start">
+    <div class="col">
+   
+         </div>
+    <div class="col">
+<div class="form-group">
+ 
+  <h3>
+DESAFIO HASH NUMERICO
+  </h3>
+  
+      </div>
+       
+       </div>
+    <div class="col">
+    
+         </div>
+  </div>
+
+  
+  
+  
+  
+  
+     <div class="row align-items-start">
+    <div class="col">
+    
+       </div>
+    <div class="col">
+<div class="form-group">
+    <input require type="text" v-model="nombre" class="form-control" id="formGroupExampleInput" placeholder="Nombre">
+      </div>
+       </div>
+    <div class="col">
+   
+       </div>
+  </div>
+
+     
+  
+  
+  
+       <div class="row align-items-start">
+    <div class="col">
+   
+         </div>
+    <div class="col">
+<div class="form-group">
+    <input  require v-model="apellido"  require type="text" class="form-control" id="formGroupExampleInput" placeholder="Apellido">
+      </div>
+       
+       </div>
+    <div class="col">
+    
+         </div>
+  </div>
+
+  
+  
+
+       <div class="row align-items-start">
+    <div class="col">
+    
+         </div>
+    <div class="col">
+<div class="form-group">
+    <input   v-model="edad"  type="number" class="form-control" id="formGroupExampleInput" placeholder="Edad">
+      </div>
+       </div>
+    <div class="col">
+   
+         </div>
+  </div>
+
+ 
+  
+  
+          <div class="row align-items-start">
+    <div class="col">
+    
+         </div>
+    <div class="col">
+  <div class="form-group ">
+
+RESULTADO: {{resultado}}
+      
+      </div>
+       
+       </div>
+    <div class="col">
+   
+         </div>
+  </div>
+  
+          <div class="row align-items-start">
+    <div class="col">
+    
+         </div>
+    <div class="col">
+  <div class="form-group ">
+
+    
+    <button  type="sumbit"class="btn-block btn btn-success"> OBTENER RESULTADO </button>
+      
+      
+      </div>
+       
+       </div>
+    <div class="col">
+   
+         </div>
+  </div>
+  
+  
+  
+  
+</form>
+</div>
+
+
+
+
+<script>
+  var app = new Vue({
+  el: '#app',
+  data: {
+    nombre: '',
+    apellido:'',
+    edad:'',
+    resultado: 0,
+  }
+    ,
+    methods: {
+      
+       procesar: function (e) {
+    
+this.resultado = (this.nombre.length + this.apellido.length)*this.edad ;
+         
+         
+         
+         
+      }
+      
+    }
+    
+    
+    
+})
+</script>
+
